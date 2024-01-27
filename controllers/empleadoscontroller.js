@@ -7,10 +7,9 @@ const getEmpleado = async (req, res) => {
 
 }
 
-
 const postEmpleado = async (req, res) => {
 
-    const { identidad, nombre } = req.body;
+    const { identidad, nombre } = req.body;S
     const params = [identidad, nombre];
     const sql = `insert into tbl_rrhh
                 (identidad,nombre)
@@ -44,4 +43,4 @@ const deleteEmpleado = async (req, res) => {
     const result = await db.query(sql, params);
     res.json(result);
 }
-export { getEmpleado, putEmpledo, postEmpleado, deleteEmpleado }
+export { getEmpleado, postEmpleado,putEmpledo, deleteEmpleado }
